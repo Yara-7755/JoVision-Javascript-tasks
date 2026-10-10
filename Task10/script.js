@@ -7,8 +7,9 @@ async function getIp() {
     }
 
     const ip = await response.text();
-    console.log("Your IP is:", ip);
-  } catch (error) {
+    document.getElementById("ipBtn").textContent = ip;
+  } 
+  catch (error) {
     console.error("Something went wrong:", error);
   }
 }
